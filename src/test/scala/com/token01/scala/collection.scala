@@ -118,8 +118,6 @@ object collection {
   }
 
   def set(): Unit ={
-    var javaMap: util.HashMap[String, AnyRef] = new util.HashMap[String, AnyRef]()
-     var s = Set(Map("3","3"));
   }
 
 }
