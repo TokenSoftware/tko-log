@@ -1,8 +1,11 @@
 package com.token01.scala.base
 
+import scala.util.Try
+
 /**
   * se
   * 模式匹配
+  *
   * @author sun-abel 
   * @create 2018-03-12 下午8:04
   **/
@@ -29,10 +32,16 @@ object se {
     case _ => "other value"
   }
 
+  def parseDouble(s: String) = try { Some(s.toDouble) } catch { case _ => None }
+
+  def strTimesTen (s: String) = for (d <- Try(s.toDouble)) yield d * 1
+
   def main(args: Array[String]): Unit = {
 
-    judgeGrade("Monica", "A")
-    println(matchConstant(1))
+//    judgeGrade("Monica", "A")
+//    println(matchConstant(1))
+
+    println(strTimesTen("100.23"))
 
   }
 }
